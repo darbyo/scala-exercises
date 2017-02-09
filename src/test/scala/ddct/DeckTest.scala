@@ -31,7 +31,7 @@ class DeckTest extends FunSuite {
     assert(deal(deck, 1).length == 1)
   }
 
-  test("Deal should not deal to more than 5 players") {
-    assert(deal(deck, 6).length == 0)
+  test("Deal should not deal to more than 4 players") {
+    assert(deal(deck, 5).length == 0)
   }
 }
