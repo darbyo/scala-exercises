@@ -5,6 +5,7 @@ import scala.util.Random
 /**
   * Created by darbyrob on 08/02/2017.
   */
+
 trait Deck {
   val suites = List("Spades", "Hearts", "Clubs", "Diamonds")
   val faces  = List("Two", "Three", "Four", "Five", "Six",
@@ -22,7 +23,7 @@ trait Deck {
     }
   }
 
-  def createHand(deck: List[Card]) : List[Card]= {
+  def createHand(deck: List[Card]): List[Card] = {
     val shuffledDeck = shuffle(deck)
      shuffledDeck.take(5)
   }

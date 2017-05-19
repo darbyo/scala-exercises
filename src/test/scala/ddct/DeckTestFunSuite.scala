@@ -1,18 +1,19 @@
 package ddct
 
-import org.scalatest.FunSuite
-import ddct.Deck._
 
 /**
   * Created by darbyrob on 08/02/2017.
   */
 
-class DeckTest extends FunSuite {
+import org.scalatest.FunSuite
+import ddct.Deck._
 
-  val deck = newDeck
+class DeckTestFunSuite extends FunSuite {
+
+  val deck: List[Card] = newDeck
 
   test("Deck should not be empty") {
-    assert(!newDeck.isEmpty)
+    assert(newDeck.nonEmpty)
   }
 
   test("Deck should contain 52 Cards") {
@@ -32,6 +33,6 @@ class DeckTest extends FunSuite {
   }
 
   test("Deal should not deal to more than 4 players") {
-    assert(deal(deck, 5).length == 0)
+    assert(deal(deck, 5).isEmpty)
   }
 }
